@@ -10,9 +10,8 @@ class Guitar:
             self.vintage = False
 
 
-    def get_age(self):
+    def get_age(self, year):
         self.age = 2016 - self.year
-        return self.age
 
 
     def is_vintage(self):
@@ -24,4 +23,6 @@ class Guitar:
 
 
     def __str__(self):
-        return "{} ({}), Worth ${} | ({}) {}".format(self.name, self.year, self.cost, self.vintage, self.age)
+        # return "{} ({}), Worth ${} | ({}) {}".format(self.name, self.year, self.cost, self.vintage, self.age)
+        return "{:>15} ({}), worth ${:10,.2f} {}".format(self.name, self.year, self.cost, self.vintage)
+
