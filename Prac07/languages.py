@@ -12,9 +12,9 @@ def main():
 
     print("The dynamically typed languages are:")
 
-    for row in languages:
-        if row.is_dynamic():
-            print(row.name)
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
 
 
 main()
