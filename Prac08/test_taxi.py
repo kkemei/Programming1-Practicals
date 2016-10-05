@@ -71,5 +71,12 @@ def main():
         print(x, "-", taxis[x])
         x += 1
 
+    print("Total trip cost: $", bill)
+    print("Taxis are now:")
+    x = 0
+    for row in taxis:
+        print(x, "-", taxis[x])
+        x += 1
+
 
 main()
