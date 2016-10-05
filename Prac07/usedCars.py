@@ -19,7 +19,7 @@ def main():
     limo.drive(115)
     print("odo =", limo.odometer)
 
-    print("{self.name} {self.fuel}, {self.odometer}".format(self=bus))  
+    print("{self.name} {self.fuel}, {self.odometer}".format(self=bus))
     print("{self.name} {self.fuel}, {self.odometer}".format(self=limo))
 
 
