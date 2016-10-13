@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 File renaming and os examples
 """
-import os, shutil
+import os, shutil, re
 
 __author__ = 'Lindsay Ward'
 
@@ -29,10 +29,33 @@ for filename in os.listdir('.'):
         # Option 2: move file to new place, with new name
         # shutil.move(filename, 'temp/' + new_name)
 
+for filename in os.listdir("."):
+    new_string = str('')
+    for file in filename:
+        # print(file)
+        if file == file.upper():
+            new_string = new_string + '_' + file
+        else:
+            new_string = new_string + file
+    print(new_string)
 
+
+            # re.sub(r'(?<=[a-z])(?=[A-Z])', '_', file)
+            # print('test', end=" ")
 # Processing subdirectories using os.walk()
 # os.chdir('..')
 # for dir_name, subdir_list, file_list in os.walk('.'):
 #     print("In", dir_name)
 #     print("\tcontains subdirectories:", subdir_list)
 #     print("\tand files:", file_list)
+
+def get_fixed_filename(name):
+    for filename in os.listdir("."):
+        new_string = str('')
+        for file in filename:
+            # print(file)
+            if file == file.upper():
+                new_string = new_string + '_' + file
+            else:
+                new_string = new_string + file
+        print(new_string)
