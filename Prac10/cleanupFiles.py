@@ -32,7 +32,6 @@ for filename in os.listdir('.'):
 for filename in os.listdir("."):
     new_string = str('')
     for file in filename:
-        # print(file)
         if file == file.upper():
             new_string = new_string + '_' + file
         else:
